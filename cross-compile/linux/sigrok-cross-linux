@@ -68,7 +68,7 @@ cd $BUILDDIR
 
 GIT_CLONE="git clone --depth=1"
 
-REPO_BASE="git://sigrok.org"
+REPO_BASE="https://github.com/sigrokproject"
 
 # -----------------------------------------------------------------------------
 
