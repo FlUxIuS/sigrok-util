@@ -145,7 +145,7 @@ if [ `uname` = "FreeBSD" ]; then
 else
 	PKG_CONFIG_PATH=$P $SB ../configure $C
 fi
-$SB make $PARALLEL $V
+$SB make -DBUILD_TESTING=OFF $PARALLEL $V
 make install $V
 cd ../..
 
