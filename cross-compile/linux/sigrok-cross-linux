@@ -145,7 +145,7 @@ if [ `uname` = "FreeBSD" ]; then
 else
 	PKG_CONFIG_PATH=$P $SB ../configure $C
 fi
-$SB make -DBUILD_TESTING=OFF $PARALLEL $V
+$SB make $PARALLEL $V
 make install $V
 cd ../..
 
@@ -154,7 +154,7 @@ $GIT_CLONE $REPO_BASE/pulseview
 cd pulseview
 mkdir build
 cd build
-PKG_CONFIG_PATH=$P $SB cmake -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX -DDISABLE_WERROR=y -DENABLE_TESTS=y -DCMAKE_EXPORT_COMPILE_COMMANDS=y ..
+PKG_CONFIG_PATH=$P $SB cmake -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX -DDISABLE_WERROR=y -DCMAKE_EXPORT_COMPILE_COMMANDS=y ..
 $SB make $PARALLEL $V
 make install $V
 $SB make test $V
